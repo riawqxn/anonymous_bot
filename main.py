@@ -10,7 +10,7 @@ from aiogram.filters import Command
 from config import BOT_TOKEN, BOT_USERNAME
 from database import init_db
 
-bot = Bot(token="BOT_TOKEN")
+bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
 
 DB = "data/bot.db"
