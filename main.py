@@ -3,7 +3,6 @@ import random
 import string
 import aiosqlite
 
-import os
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.filters import Command
@@ -11,6 +10,7 @@ from aiogram.filters import Command
 from config import BOT_TOKEN, BOT_USERNAME
 from database import init_db
 
+import os
 bot = Bot(token=os.getenv("BOT_TOKEN"))
 dp = Dispatcher()
 
