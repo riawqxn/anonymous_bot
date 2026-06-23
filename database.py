@@ -1,7 +1,8 @@
 import aiosqlite
 
-DB = "data/bot.db"
+import os
 
+DB = os.path.join(os.getcwd(), "bot.db")
 
 async def init_db():
     async with aiosqlite.connect(DB) as db:
