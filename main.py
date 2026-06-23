@@ -10,7 +10,7 @@ from aiogram.filters import Command
 from config import BOT_TOKEN, BOT_USERNAME
 from database import init_db
 
-bot = Bot(token=8733248197:AAEhO2-dsuwjpDqQdDf5ZdncCT8XzDM2nsU)
+bot = Bot(token="BOT_TOKEN")
 dp = Dispatcher()
 
 DB = "data/bot.db"
@@ -89,7 +89,7 @@ async def start(m: Message):
 
     await m.answer(
         f"👤 твій профіль\n\n"
-        f"🔗 https://t.me/{ihatekaddbot}?start={c}"
+        f"🔗 https://t.me/{BOT_USERNAME}?start={c}"
     )
 
 
@@ -102,7 +102,7 @@ async def profile(m: Message):
 
     await m.answer(
         f"👤 профіль\n"
-        f"🔗 https://t.me/{ihatekaddbot}?start={c}"
+        f"🔗 https://t.me/{BOT_USERNAME}?start={c}"
     )
 
 
@@ -113,7 +113,7 @@ async def profile(m: Message):
 async def link(m: Message):
     c = await get_or_create(m.from_user.id)
 
-    await m.answer(f"https://t.me/{ihatekaddbot}?start={c}")
+    await m.answer(f"https://t.me/{BOT_USERNAME}?start={c}")
 
 
 # =====================
