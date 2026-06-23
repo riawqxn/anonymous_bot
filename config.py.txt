@@ -1,0 +1,7 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BOT_TOKEN = os.getenv("8733248197:AAEhO2-dsuwjpDqQdDf5ZdncCT8XzDM2nsU")
+BOT_USERNAME = os.getenv("ihatekaddbot")
